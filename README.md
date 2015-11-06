@@ -1,7 +1,9 @@
 # HackTM2015 entry
 
 Project name: CoderDojo Connect
+
 Description: Facilitating the connection of CoderDojo members and providing inteligible resources
+
 
 Team members:
 Apostol Cristi - apostolcristi
