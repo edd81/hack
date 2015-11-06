@@ -1,23 +1,10 @@
-# HackTM2015 entry
+# HackTM2015 
 
-Project name: CoderDojo Connect
+Project name: Idle Nations
 
-Description: Facilitating the connection of CoderDojo members and providing inteligible resources
+Description: Idle Game with a Civilization/Age of Empires theme
 
 
 Team members:
-
-Apostol Cristi - apostolcristi
-
-Amariei Ovidiu - AmarieiOvidiu
-
-Fluture Sebastian - SebastianP98
-
-Vlad Arambasa - VladArambasa
-
-Tatov Andrei - AndreiTatov
-
-
-Mentor:
 
 Eduard Boka - edd81
