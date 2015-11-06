@@ -13,7 +13,7 @@ Amariei Ovidiu - AmarieiOvidiu
 
 Fluture Sebastian - SebastianP98
 
-Vlad Arambasa - 
+Vlad Arambasa - VladArambasa
 
 Tatov Andrei - 
 
