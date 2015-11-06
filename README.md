@@ -6,11 +6,18 @@ Description: Facilitating the connection of CoderDojo members and providing inte
 
 
 Team members:
+
 Apostol Cristi - apostolcristi
+
 Amariei Ovidiu - AmarieiOvidiu
+
 Fluture Sebastian - SebastianP98
+
 Vlad Arambasa - 
+
 Tatov Andrei - 
 
+
 Mentor:
+
 Eduard Boka - edd81
