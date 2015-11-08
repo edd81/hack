@@ -1,0 +1,58 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.navbar-brand h4{
+	color:#fff !important;
+	margin-left:10px;
+}
+
+#storyPanel {
+	overflow-y:scroll;
+	height:338px;
+}
+
+#tooltipPopup {
+    width: 25.5vw;
+    position: absolute;
+    background: #e7e7e7;
+    display: none;
+    padding: 10px;
+    border: 2px solid #999;
+    font-size: 1.15em;
+	z-index: 99999;
+	
+	-webkit-border-radius: 10px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius: 10px;
+	-moz-border-radius-topleft: 0;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+}
+
+.red {
+	color:#ff0000;
+}
+
+.green {
+	color:#30ab56;
+}
+
+.blue {
+	color:#3072ab;
+}

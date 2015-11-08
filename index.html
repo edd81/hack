@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<title>IdleNations</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/theme.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="#"><img class="pull-left" src="img/logo.png">
+			<h4 class="pull-left"> IdleNations </h4>
+			</a> </div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<!--
+		    <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            -->
+			</ul>
+		</div>
+		<!--/.nav-collapse --> 
+	</div>
+</nav>
+<div class="container theme-showcase" role="main"> 
+	
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="row">
+		<div class="col-xs-5">
+		<div class="panel panel-primary" style="height:380px;">
+				<div class="panel-heading">
+					<h3 class="panel-title">Resource management<span class="pull-right" id="totalWorkplaces">0 workplaces</span></h3>
+				</div>
+				<div class="panel-body"> 
+			<div class="bs-component">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#resources" aria-expanded="false">Resources</a></li>
+					<li id="housingTab"  style="opacity:0;" class=""><a data-toggle="tab" href="#housing" aria-expanded="false">Housing</a></li>
+					<li id="jobsTab"  style="opacity:0;" class=""><a data-toggle="tab" href="#jobs" aria-expanded="false">Jobs</a></li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div id="resources" class="tab-pane active in">
+						<table class="table">
+							<tbody>
+								<tr id="peopleTr" style="opacity:0;">
+									<td width="40">1</td>
+									<td width="80">People</td>
+									<td width="85" id="peopleOwned">0</td>
+									<td width="85" id="peoplePs">0/s</td>
+									<td><a class="btn btn-xs btn-default" type="button" onclick="clickGather('people')">recruit</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Food</td>
+									<td id="foodOwned">0</td>
+									<td id="foodPs">0/s</td>
+									<td><a class="btn btn-xs btn-default" type="button" onclick="clickGather('food')">gather</a></td>
+								</tr>
+								<tr id="woodTr" style="opacity:0;">
+									<td>2</td>
+									<td>Wood</td>
+									<td id="woodOwned">0</td>
+									<td id="woodPs">0/s</td>
+									<td><a class="btn btn-xs btn-default" type="button" onclick="clickGather('wood')">gather</a></td>
+								</tr>
+								<tr id="oreTr" style="opacity:0;">
+									<td>2</td>
+									<td>Ore</td>
+									<td id="oreOwned">0</td>
+									<td id="orePs">0/s</td>
+									<td><a class="btn btn-xs btn-default" type="button" onclick="clickGather('ore')">gather</a></td>
+								</tr>
+								<tr id="clayTr" style="opacity:0;">
+									<td>2</td>
+									<td>Clay</td>
+									<td id="clayOwned">0</td>
+									<td id="clayPs">0/s</td>
+									<td><a class="btn btn-xs btn-default" type="button" onclick="clickGather('clay')">gather</a></td>
+								</tr>
+								<tr id="goldTr" style="opacity:0;">
+									<td>2</td>
+									<td>Gold</td>
+									<td id="goldOwned">0</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="housing" class="tab-pane">
+						<table class="table">
+						<tbody>
+							<tr>
+								<td width="40">1</td>
+								<td width="80">Hut</td>
+								<td width="170" id="hutOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('hut')" onmouseover="tooltip('Hut','housing',event)" onmouseout="tooltip('hide')" >+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Cottage</td>
+								<td id="cottageOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('cottage')" onmouseover="tooltip('Cottage','housing',event)" onmouseout="tooltip('hide')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>House</td>
+								<td id="houseOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('house')" onmouseover="tooltip('House','housing',event)" onmouseout="tooltip('hide')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Manor</td>
+								<td id="manorOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('manor')" onmouseover="tooltip('Manor','housing',event)" onmouseout="tooltip('hide')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Mansion</td>
+								<td id="mansionOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('mansion')" onmouseover="tooltip('Mansion','housing',event)" onmouseout="tooltip('hide')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Castle</td>
+								<td id="castleOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onClick="buyHousing('castle')" onmouseover="tooltip('Castle','housing',event)" onmouseout="tooltip('hide')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<div id="jobs" class="tab-pane">
+						<table class="table">
+						<tbody>
+							<tr>
+								<td width="40">1</td>
+								<td width="80">Farmer</td>
+								<td width="170" id="FarmerOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onclick="clickJob('Farmer')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Lumberjack</td>
+								<td id="LumberjackOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onclick="clickJob('Lumberjack')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Miner</td>
+								<td id="MinerOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onclick="clickJob('Miner')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Mason</td>
+								<td id="MasonOwned">0</td>
+								<td><a class="btn btn-xs btn-default" type="button" onclick="clickJob('Mason')">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			</div></div>
+		</div>
+		<div class="col-xs-7">
+			<div class="panel panel-primary" style="height:380px;">
+				<div class="panel-heading">
+					<h3 class="panel-title">Story</h3>
+				</div>
+				<div class="panel-body" id="storyPanel">
+					<div class="row">
+						<div class="col-md-12">
+						<p>Welcome to IdleNations. To get started let's gather some food by clicking on the <span class="blue">gather</span> button in the Resources tab.</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-5">
+		<div class="panel panel-primary" style="height:430px;">
+				<div class="panel-heading">
+					<h3 class="panel-title">Units<span class="pull-right">0 territory</span></h3>
+				</div>
+				<div class="panel-body"> 
+			<div class="bs-component">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#melee" aria-expanded="true">Melee</a></li>
+					<li class=""><a data-toggle="tab" href="#ranged" aria-expanded="false">Ranged</a></li>
+					<li class=""><a data-toggle="tab" href="#cavalry" aria-expanded="false">Cavalry</a></li>
+					<li class=""><a data-toggle="tab" href="#machinery" aria-expanded="false">Machinery</a></li>
+				</ul>
+				<div class="tab-content" id="myTabContent2">
+					<div id="melee" class="tab-pane active in">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td width="40">1</td>
+									<td width="100">Spearman</td>
+									<td width="150">0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Warrior</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Soldier</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Hoplite</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Phalanx</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Pikeman</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Fusilier</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="ranged" class="tab-pane">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td width="40">1</td>
+									<td width="100">Slinger</td>
+									<td width="150">0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Bowman</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Longbowman</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Archer</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Crosbowman</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Musketeer</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Rifleman</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="cavalry" class="tab-pane">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td width="40">1</td>
+									<td width="100">Horseman</td>
+									<td width="150">0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Sagittarii</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Lancer</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Cataphract</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Horse Archer</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Knight</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Hussar</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="machinery" class="tab-pane">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td width="40">1</td>
+									<td width="100">Ballista</td>
+									<td width="150">0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Catapult</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Bombard</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Cannon</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Artilery</td>
+									<td>0</td>
+									<td><a class="btn btn-xs btn-default" type="button">+1</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+10</a>&nbsp;<a class="btn btn-xs btn-default" type="button">+100</a></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			
+			</div></div>
+		</div>
+		<div class="col-xs-7">
+			<div class="panel panel-primary"  style="height:430px;">
+				<div class="panel-heading">
+					<h3 class="panel-title">Combat</h3>
+				</div>
+				<div class="panel-body"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+			<button class="button btn-xs btn-primary" onclick="saveFromClick()">Save from Click</button>
+		</div>
+		<div class="col-md-3">
+			<button class="button btn-xs btn-primary" onclick="newGameClick()">New Game</button>
+		</div>
+	</div>
+
+</div>
+<!-- /container --> 
+
+<!-- special popups --> 
+<div id="tooltipPopup" style="display: none">
+	<div id="tipTitle"></div>
+	<hr/>
+	<div id="tipText"></div>
+	<hr/>
+	<div id="tipCost"></div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/game/lz-string.js"></script>
+<script type="text/javascript" src="js/game/config.js"></script>
+<script type="text/javascript" src="js/game/update.js"></script>
+<script type="text/javascript" src="js/game/main.js"></script>
+
+
+<script>
+$(document).ready(function() {
+	$("a[href='#']").click(function(e) {
+		e.preventDefault();
+	  });
+	
+	
+})
+</script>
+
+</body>
+</html>
